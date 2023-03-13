@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from flask import request
 import sqlite3
-from util import base64_to_pil
 from werkzeug.utils import secure_filename
 
 import numpy as np
