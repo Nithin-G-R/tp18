@@ -1,0 +1,20 @@
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Information Menu</b></h4>
+    {% for menu in menus %}
+    <a class="w3-bar-item w3-button w3-hover-black {{menu[1]}}" href="{{menu[2]}}">{{menu[0]}}</a>
+    {% endfor %}
+
+</nav>
+<div class="w3-main" style="margin-left:250px">
+  <div class="w3-row w3-padding-64">
+    {% autoescape false %}
+      <p>{{content}}</p>
+      {% endautoescape %}
+  </div>
+</div>
+
