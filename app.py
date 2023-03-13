@@ -62,8 +62,8 @@ def upload_file():
 
         cls = predict_cls(np_img)
         
-        print(request.files)
-        f.save(secure_filename(f.filename))
+      #   print(request.files)
+      #  f.save(secure_filename(f.filename))
 
         return model.resultPage(cls)
     else:
