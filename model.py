@@ -12,7 +12,7 @@ def InfoPage(section=None, title=None, content=None):
     base_menus = [
         ["News", 0, "/InfoHome/0"],
         ["Reuse Methods", 0, "/InfoHome/1"],
-        ["analysis", 0, "/InfoHome/2"],
+        ["Impact", 0, "/InfoHome/2"],
     ]
 
     menus = base_menus.copy()
