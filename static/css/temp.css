@@ -76,7 +76,7 @@ body {
     background-color: #E3E3E3;
     */
     background-color: #E3E3E3;
-    padding: 20;
+    padding: 20px;
 }
 
 
@@ -285,7 +285,7 @@ label{
 
 .forum_button {
     border-radius: 10px;
-    background-color: white;
+    background-color: skyblue;
     color: black;
     border: 2px solid black;
     padding: 10px 32px;
@@ -362,3 +362,4 @@ label{
     display: inline-block;
     font-size: 16px;
 }
+
