@@ -10,7 +10,7 @@ def HomePage():
 
 def InfoPage(section=None, title=None, content=None):
     base_menus = [
-        ["impact", 0, "/InfoHome/0"],
+        ["News", 0, "/InfoHome/0"],
         ["Reuse Methods", 0, "/InfoHome/1"],
         ["analysis", 0, "/InfoHome/2"],
     ]
