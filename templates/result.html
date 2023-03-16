@@ -1,18 +1,54 @@
-<div class="w3-content" style="max-width:1100px;">
+<head>
+    <style>
+        body  {
+          background-image: url("/static/img/ai_back.jpg");
+          background-color: #cccccc;
+        }
+    </style>
+</head>
 
-
-      <div class="w3-row w3-padding-64">
-
-      <h1 class="w3-center">Your Result</h1>
-          <br>
-          <h3 class="w3-center">Waste is classified as: <b>{{cls}}</b></h3>
-
-  </div>
-
-    <div class="w3-container w3-center">
-    <p>Find out another waste?</p>
-        <br>
-        <button class="w3-button"><a href="/sorting"><b>Back</b>></a></button>
-
-  </div>
+<body>
+<div class="w3-cell-row">
+<div class="w3-container w3-cell" style = "width: 50%">
+  <h3 class="w3-text">Waste is classified as:</h3>
+  <h1 class="w3-text" style="font-size:7vw;"><b>{{cls}}</b></h1>
+    {% if cls == 'ORGANIC' %}
+  <h3 class="w3-text">Organic waste, or green waste, is organic material such as food, garden and lawn clippings. It can also include animal and plant based material and degradable carbon such as paper, cardboard and timber.</h3>
+    {% else %}
+      <h3 class="w3-text">Recylable waste in Victoria include:</h3>
+          <h5 class="w3-text">Hard/rigid plastic bottles and containers </h5>
+      <h5 class="w3-text">Paper and cardboard including clean pizza boxes</h5>
+      <h5 class="w3-text">Aluminium cans, foil (scrunch into a ball) and trays</h5>
+      <h5 class="w3-text">Steel cans</h5>
+      <h5 class="w3-text">Empty aerosol cans</h5>
+      <h5 class="w3-text">Glass bottles and jars</h5>
+    {% endif %}
 </div>
+
+<div class="w3-container w3-cell" style = "width: 50%; vertical-align: middle">
+    {% if cls == 'ORGANIC' %}
+  <div class="w3-container w3-left w3-padding-16">
+           <h3 class="w3-text">You can discard it in <b>LIME GREEN</b> bin</h3>
+        </div>
+    <div class="w3-card-12" style="width:50%; margin: 0 auto; width:150px; height:350px">
+            <img src="/static/img/limegreen.jpg" style="width:100%; height:100%">
+          </div>
+    {% else %}
+    <div class="w3-container w3-left w3-padding-16">
+           <h3 class="w3-text">You can discard it in <b>YELLOW</b> bin</h3>
+        </div>
+    <div class="w3-card-12" style="width:50%; margin: 0 auto; width:150px; height:350px">
+            <img src="/static/img/yellow.jpg" style="width:100%; height:100%">
+          </div>
+    {% endif %}
+</div>
+</div>
+        <div class="w3-display-bottomright" style = "padding-bottom: 8%; padding-right: 3%">
+            <p>Find out the type of another waste?
+            <button class="w3-button"><a href="/sorting"><b>Click here</b></a></button></p>
+
+        </div>
+<div class="w3-display-bottommiddle" style = "padding-bottom: 6%">
+    <p>Image source:<a href="http://www.freepik.com">Designed by Freepik</a></p>
+    </div>
+</body>
