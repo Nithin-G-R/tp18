@@ -1,4 +1,4 @@
-<head>
+<!-- <head>
     <style>
         body  {
           background-image: url("/static/img/ai_back.jpg");
@@ -10,4 +10,96 @@
 <body>
 <h1>Map</h1>
 <p>This page will be review the exact location of waste recycling spot in Melbourne</p>
-</body>
+</body> -->
+
+</head>
+<body>
+  <h1 style="text-align: center;">Recycling Map</h1>
+  <div class="container">
+      <div id="googleMap" style="width:80%;height:70%;"></div>
+   <div class="container2">
+       <p>In Melbourne, we set up x garbage recycling spots, such recycling spots will apply our AI sorting technology to identify the waste composites, and categorize in the correct bin, this map is updated in real time with our back-end database, This means that our service content will continue to expand with the development of the project and serve more people in the near future.</p >
+   </div>
+   <div>
+         </div>
+  </div>
+
+
+
+
+<style type="text/css">
+  .container {
+    height: 800px;
+    width: 100%;
+  }
+
+  #googleMap{
+    margin: 0 auto;
+
+  }
+  .container2{
+   margin: 0 auto;
+   width: 1000px;
+   height: 500px;
+  }
+  p{
+   font-family: "黑体";
+   font-size: 30px;
+  }
+</style>
+
+
+<html>
+<head>
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJW4jsPlNKgv6jFm3B5Edp5ywgdqLWdmc&sensor=false">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng(-37.82285,144.94892);
+var myLatLng1 = {lat: -37.81285, lng: 144.91892};
+var myLatLng2 = {lat: -37.81285, lng: 144.81892};
+var myLatLng3 = {lat: -37.85285, lng: 144.85892};
+var myLatLng4 = {lat: -37.86285, lng: 144.88892};
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+var marker2=new google.maps.Marker({
+  position:myLatLng1,
+  });
+
+var marker3=new google.maps.Marker({
+  position:myLatLng2,
+  });
+
+var marker4=new google.maps.Marker({
+  position:myLatLng3,
+  });
+
+var marker5=new google.maps.Marker({
+  position:myLatLng4,
+  });
+
+marker.setMap(map);
+marker2.setMap(map);
+marker3.setMap(map);
+marker4.setMap(map);
+marker5.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+</html>
