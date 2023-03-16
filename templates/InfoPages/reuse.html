@@ -1,7 +1,15 @@
+<head>
+    <style>
+        body  {
+          background-image: url("/static/img/ai_back.jpg");
+          background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
 <h1>Reuse Methods</h1>
 <h3>Here are some of the reusing techniques to improve sustainability</h3>
 
-<body>
 
 <!--
     <div class="reuse-body">
@@ -33,7 +41,7 @@
 -->
 
 <div class="w3-row-padding w3-center w3-margin-top">
-<div class="w3-third">
+<div class="w3-third" style = "background-color: white">
   <div class="w3-card w3-container" style="min-height:460px">
       <h3>Wrapping Paper</h3><br>
   <img src="/static/img/paper.jpeg" alt="paper" style="width:80%; height: 40%">
@@ -42,7 +50,7 @@
   </div>
 </div>
 
-<div class="w3-third">
+<div class="w3-third" style = "background-color: white">
   <div class="w3-card w3-container" style="min-height:460px">
   <h3>Pen Holder</h3><br>
   <img src="/static/img/pen_holder.jpeg" alt="map" style="width: 100%; height: 46%">
@@ -52,7 +60,7 @@
   </div>
 </div>
 
-<div class="w3-third">
+<div class="w3-third" style = "background-color: white">
   <div class="w3-card w3-container" style="min-height:460px">
   <h3>Event</h3><br>
   <img src="/static/img/tree.jpeg" alt="tree" style="width: 70%; height: 37%">
@@ -62,17 +70,12 @@
 </div>
 </div>
 
-
-</body>
-
-<body>
         <div class="summary-body">
             <br>
             <br>
                 <p>The goal is to provide insights regarding waste disposal, reuse and recycling techniques.</p>
-                <p>Additionally, an artificial intelligence algorithm is deployed to help you classify the garbage.</p>
+                <p>Additionally, an <a href = "/sorting"><b>artificial intelligence algorithm</b></a> is deployed to help you classify the garbage.</p>
         </div>
-</body>
 
 <br>
 <br>
@@ -81,5 +84,8 @@
 <br>
 <hr>
 
-<p class="w3-text" style="margin-left: 750px;">Want to find your nearest recycling spot?</p><br>
-        <button class="forum_button" style="margin-left: 850px"><a href="/map">Try Now</a></button>
+<div class="w3-display-bottomright" style = "background-color: white; padding-bottom: 6%; position: fixed">
+    <p class="w3-text" style = "margin-right: 20px; margin-left: 20px">Want to find your nearest recycling spot?
+        <button class="forum_button"><a href="/map">Click here</a></button></p>
+    </div>
+</body>
