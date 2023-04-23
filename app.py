@@ -10,7 +10,7 @@ import cv2
 from tensorflow import keras
 
 from transformers import pipeline
-qa_model = pipeline("question-answering")
+qa_model = pipeline("question-answering", model = 'valhalla/longformer-base-4096-finetuned-squadv1', framework = 'tf')
 
 import model
 import os
@@ -22,6 +22,10 @@ mod = keras.models.load_model('waste_mobile_without.h5')
 @app.route('/home')
 @app.route('/')
 def HomePage():  # put application's code here
+    context = "Huggingface has democratized NLP. Huge thanks to Huggingface for this."
+    question = "What has Huggingface done ?"
+    answer = qa_model(question = question, context = context)
+    console.log(answer['answer'])
     return model.HomePage()
 
 
