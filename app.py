@@ -9,7 +9,8 @@ import tensorflow as tf
 import cv2
 from tensorflow import keras
 
-import torch
+from transformers import LongformerTokenizer, EncoderDecoderModel
+
 model1 = EncoderDecoderModel.from_pretrained("patrickvonplaten/longformer2roberta-cnn_dailymail-fp16")
 tokenizer1 = LongformerTokenizer.from_pretrained("allenai/longformer-base-4096") 
 
