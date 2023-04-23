@@ -4,3 +4,4 @@ numpy==1.19.5
 Pillow==9.4.0
 tensorflow-cpu==2.5.1
 opencv-python-headless
+transformers==4.28.1
