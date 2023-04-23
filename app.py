@@ -10,7 +10,7 @@ import cv2
 from tensorflow import keras
 
 from transformers import pipeline
-qa_model = pipeline("question-answering", model = 'valhalla/longformer-base-4096-finetuned-squadv1', framework = 'tf')
+qa_model = pipeline("question-answering", model = 'distilbert-base-cased-distilled-squad', framework = 'tf')
 
 import model
 import os
