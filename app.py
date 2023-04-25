@@ -25,8 +25,8 @@ def HomePage():  # put application's code here
     context = "Huggingface has democratized NLP. Huge thanks to Huggingface for this."
     question = "What has Huggingface done ?"
     answer = qa_model(question = question, context = context)
-    print(answer['answer'])
-    return model.HomePage()
+    ans = answer['answer']
+    return model.HomePage(ans)
 
 
 @app.route('/InfoHome')
