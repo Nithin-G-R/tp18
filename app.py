@@ -22,8 +22,15 @@ mod = keras.models.load_model('waste_mobile_without.h5')
 @app.route('/home')
 @app.route('/')
 def HomePage():  # put application's code here
-    context = "Huggingface has democratized NLP. Huge thanks to Huggingface for this."
-    question = "What has Huggingface done ?"
+    question = "Which year formed the basis of modern genetics?"
+    context = '''The basis for modern genetics began with the work of Gregor Mendel in 1865.[26] This outlined the principles of biological inheritance.[27] 
+    However, the significance of his work was not realized until the early 20th century when evolution became a unified theory as the modern synthesis 
+    reconciled Darwinian evolution with classical genetics.[28] In the 1940s and early 1950s, a series of experiments by Alfred Hershey and Martha Chase 
+    pointed to DNA as the component of chromosomes that held the trait-carrying units that had become known as genes. A focus on new kinds of model 
+    organisms such as viruses and bacteria, along with the discovery of the double-helical structure of DNA by James Watson and Francis Crick in 1953, 
+    marked the transition to the era of molecular genetics. From the 1950s onwards, biology has been vastly extended in the molecular domain. The genetic 
+    code was cracked by Har Gobind Khorana, Robert W. Holley and Marshall Warren Nirenberg after DNA was understood to contain codons. The Human Genome 
+    Project was launched in 1990 to map the human genome.[29]'''
     answer = qa_model(question = question, context = context)
     ans = answer['answer']
     return model.HomePage(ans)
