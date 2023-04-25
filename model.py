@@ -4,8 +4,8 @@ from flask import render_template
 webpage_view = view.View()
 
 
-def HomePage():
-    return webpage_view("HomePage")
+def HomePage(ans = ''):
+    return webpage_view("HomePage", ans = ans)
 
 
 def InfoPage(section=None, title=None, content=None):
